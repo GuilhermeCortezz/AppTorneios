@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneio de Quadribol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Torneio de Quadribol</h1>
+    <div id="registro">
+        <label for="nomeParticipante">Nome do Participante:</label>
+        <input type="text" id="nomeParticipante" placeholder="Nome do time">
+        <button onclick="registrarParticipante()">Registrar</button>
+    </div>
+    <div id="listaParticipantes">
+        <h2>Lista de Participantes</h2>
+        <ul id="nomesParticipantes"></ul>
+    </div>
+    <button onclick="gerarEExibirPartidas()">Gerar Partidas</button>
+    <button onclick="limparLocalStorage()">Reiniciar</button>
+    <div id="partidas">
+        <h2>Partidas de Quadribol</h2>
+        <div id="listaPartidas"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
