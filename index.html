@@ -7,21 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Torneio de Quadribol</h1>
-    <div id="registro">
-        <label for="nomeParticipante">Nome do Participante:</label>
-        <input type="text" id="nomeParticipante" placeholder="Nome do time">
-        <button onclick="registrarParticipante()">Registrar</button>
-    </div>
-    <div id="listaParticipantes">
-        <h2>Lista de Participantes</h2>
-        <ul id="nomesParticipantes"></ul>
-    </div>
-    <button onclick="gerarEExibirPartidas()">Gerar Partidas</button>
-    <button onclick="limparLocalStorage()">Reiniciar</button>
-    <div id="partidas">
-        <h2>Partidas de Quadribol</h2>
-        <div id="listaPartidas"></div>
+    <div id="conteudo">
+        <h1>Torneio de Quadribol</h1>
+        <div id="registro">
+            <label for="nomeParticipante">Nome do Participante:</label>
+            <input type="text" id="nomeParticipante" placeholder="Nome do time">
+            <button onclick="registrarParticipante()">Registrar</button>
+        </div>
+        <div id="listaParticipantes">
+            <h2>Lista de Participantes</h2>
+            <ul id="nomesParticipantes"></ul>
+        </div>
+        <button onclick="gerarEExibirPartidas()">Gerar Partidas</button>
+        <button onclick="limparLocalStorage()">Reiniciar</button>
+        <div id="partidas">
+            <h2>Partidas de Quadribol</h2>
+            <div id="listaPartidas"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
