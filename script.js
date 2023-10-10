@@ -119,6 +119,7 @@ function exibirPartidasQuadribol(partidas) {
 
 function registrarTodosResultados(partidas) {
     const resultadosPartidas = [];
+    let camposNaoPreenchidos = false;
 
     partidas.forEach((partida, index) => {
         const pontuacaoCasaInput = document.getElementById(`pontuacaoCasa${index}`);
@@ -128,7 +129,7 @@ function registrarTodosResultados(partidas) {
         const pontuacaoVisitante = pontuacaoVisitanteInput.value;
 
         if (pontuacaoCasa === '' || pontuacaoVisitante === '') {
-            alert('Por favor, insira as pontuações corretamente.');
+            camposNaoPreenchidos = true;
             return;
         }
 
@@ -141,12 +142,17 @@ function registrarTodosResultados(partidas) {
 
         resultadosPartidas.push(resultado);
     });
-
+    
+    if (camposNaoPreenchidos) {
+        alert('Por favor, insira as pontuações corretamente.');
+        return;
+    }
     salvarResultadosPartidas(resultadosPartidas);
 
     mostrarPontuacao(); // Atualizar a exibição da pontuação
-
+    
 }
+
 
 // Função para exibir as partidas de Quadribol com campos de pontuação
 function exibirPartidasQuadribolComPontuacao(partidas) {
